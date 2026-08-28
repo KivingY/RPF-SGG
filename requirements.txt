@@ -1,0 +1,7 @@
+torch==2.5.0
+torchvision==0.20.0
+transformers==5.12.1
+numpy==2.0.1
+pillow==11.3.0
+PyYAML>=6.0
+ninja>=1.11

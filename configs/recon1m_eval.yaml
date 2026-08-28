@@ -1,0 +1,30 @@
+checkpoint: checkpoints/rpf_sgg_recon1m_sgdet.pth
+
+data:
+  train_cache: data/cache/recon1m_train.pkl
+  test_cache: data/cache/recon1m_test.pkl
+
+evaluation:
+  max_size: 672
+  batch_size_per_gpu: 4
+  num_workers: 4
+  top_objects: 400
+  max_pairs: 10000
+  binding_topk: 2
+  predicate_temperature: 0.85
+  object_score_power: 0.75
+  quality_power: 0.50
+  binding_score_power: 0.50
+  predicate_prior_power: 0.50
+  iou_threshold: 0.50
+  ks: [20, 50, 100, 500]
+
+paper_metrics_percent:
+  R@20: 26.36
+  R@50: 32.76
+  R@100: 37.41
+  R@500: 47.22
+  mR@20: 20.23
+  mR@50: 24.66
+  mR@100: 27.65
+  mR@500: 33.40
